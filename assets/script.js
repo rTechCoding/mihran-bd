@@ -35,9 +35,9 @@ const audioTracks = [
 
 // Gallery images for puzzle
 const puzzleImages = [
-    "assets/img/game-1.jpeg",
-    "assets/img/game-2.jpeg",
-    "assets/img/game-3.jpeg"
+    "https://i.pinimg.com/736x/bf/19/cd/bf19cd20f6731fe86be5b3a4625b8d5d.jpg",
+    "https://i.pinimg.com/736x/fd/56/7d/fd567de6a4719347898923a9abeacd1a.jpg",
+    "https://i.pinimg.com/736x/8f/3d/78/8f3d78e9f0cba1f3e0948c0c3e73e949.jpg"
 ];
 
 // DOM Elements
