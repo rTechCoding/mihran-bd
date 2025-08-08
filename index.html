@@ -15,7 +15,7 @@
         rel="stylesheet">
 </head>
 
-<body style="background-image:url('Pink.html\ Purple\ Star\ Happy\ Birthday.png') ;" >
+<body style="background-image:url('Pink.html\ Purple\ Star\ Happy\ Birthday.png') ;" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
 
     <!-- Animated Background Elements -->
     <div class="background-animation">
@@ -425,8 +425,29 @@
             audio.currentTime = 0; // reset position
         }, 30000); // 30000 ms = 30 sec
     </script>
-    
-</body>
+    <script>
+    // Block common shortcuts (Ctrl+S, Ctrl+U, Ctrl+C, F12, etc.)
+    document.addEventListener('keydown', function (e) {
+      if (
+        (e.ctrlKey && ['s', 'u', 'c', 'p'].includes(e.key.toLowerCase())) || // Ctrl+S/U/C/P
+        e.key === 'F12' || // Dev Tools
+        (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') // Ctrl+Shift+I
+      ) {
+        e.preventDefault();
+        alert("Action disabled!");
+      }
+    });
 
+    // Optional: Block console access
+    setInterval(function () {
+      const before = new Date();
+      debugger;
+      const after = new Date();
+      if (after - before > 100) {
+        window.location.reload(); // Reload if dev tools opened
+      }
+    }, 1000);
+  </script>
+</body>
 
 </html>
